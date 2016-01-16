@@ -9,6 +9,14 @@
             $content.html(loading);
             postController.getDemon(context)
         });
+        this.get('#/portfolio', function(context) {
+            $content.html(loading);
+            postController.getDemon(context)
+        });
+        this.get('#/post/:id', function(context) {
+            $content.html(loading);
+            postController.getDemon(context)
+        });
     })
     sammyApp.run('#/');
 }())
