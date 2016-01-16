@@ -1,0 +1,22 @@
+{
+  "name": "slice-and-dice-final-project",
+  "version": "1.0.0",
+  "description": "final project for Slice and Dice @ Telerik Software Academy",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mstratiev/slice-and-dice-final-project.git"
+  },
+  "author": "martin.stratiev@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mstratiev/slice-and-dice-final-project/issues"
+  },
+  "homepage": "https://github.com/mstratiev/slice-and-dice-final-project#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
