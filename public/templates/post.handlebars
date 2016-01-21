@@ -1,0 +1,73 @@
+<div class="container-fluid color-mid">
+    <div class="row row-fixed">
+        <div class="col-md-7">
+            {{!-- Post --}}
+            <div class="container-fluid current-post">
+                <div class="row">
+                    Posted by {{post.user.username}} on {{post.dateConverted}} in {{post.category}} | {{post.commentsCount}} Comments
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <img src="{{post.image}}" alt="">
+                    </div>
+                    <div class="col-md-8">
+                        {{post.body}}
+                    </div>
+                </div>
+            </div>
+            {{!-- Post comments --}}
+            <div class="container-fluid comments">
+                <h2>{{post.commentsCount}} Comments</h2> {{#each post.comments}}
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-1">
+                            <div class="row">
+                                <img src="{{this.user.image}}" alt="" />
+                            </div>
+                            <div class="row">
+                                <span class="date">{{this.date}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-11">
+                            <h4>{{this.user.username}} says:</h4>
+                            <div class="container-fluid">
+                                {{this.body}}
+                            </div>
+                            <div class="container-fluid">
+                                <button class="btn btn-default btn-xs pull-right">Read more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+                <div class="container-fluid">
+                	<h3 class="leave a comment">Leave a Comment</h3>
+                	{{!-- Insert comment form --}}
+                </div>
+            </div>
+        </div>
+        {{!-- Recent things --}}
+        <div class="col-md-4 col-md-offset-1 recent">
+            <div class="container-fluid posts">
+                <h4>Recent Posts</h4>
+                <div class="container-fluid color-light">
+                    <ul>
+                        {{#each recentPosts}}
+                        <li><a href="{{link}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid comments">
+                <h4>Recent Comments</h4>
+                <div class="container-fluid color-light">
+                    <ul>
+                        {{#each recentComments}}
+                        <li><a href="{{link}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

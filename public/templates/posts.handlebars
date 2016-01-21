@@ -1,0 +1,58 @@
+<div class="container-fluid color-mid">
+    <div class="row row-fixed">
+        <div class="row text-left">
+            {{!-- insert trail --}}
+        </div>
+        {{!-- Posts --}}
+        <div class="col-md-7 post">
+            {{#if posts}} {{#each posts}}
+            <div class="container-fluid">
+                <div class="row text-left">
+                    <h3><a href="/posts/{{this.id}}">{{this.title}}</a></h3>
+                </div>
+                <div class="row text-left">
+                    Posted by {{this.user.username}} on {{this.dateConverted}} in {{this.category}} | {{this.commentsCount}} Comments
+                </div>
+                <div class="row text-left">
+                    <div class="col-md-4">
+                        {{!-- <img class="img-thumbnail" src="{{this.image}}" alt=""> --}}
+                    </div>
+                    <div class="col-md-8">
+                        {{this.body}}
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <button class="btn btn-default btn-xs pull-right read-more">Read more</button>
+                </div>
+            </div>
+            {{/each}} {{!-- Insert pagination --}} {{else}}
+            <div class="row">
+                <h3>No posts to display</h3>
+            </div>
+            {{/if}}
+        </div>
+        {{!-- Recent things --}}
+        <div class="col-md-4 col-md-offset-1 recent">
+            <div class="container-fluid posts text-left">
+                <h4 class="text-left">Recent Posts</h4>
+                <div class="container-fluid color-light">
+                    <ul>
+                        {{#each recentPosts}}
+                        <li><a href="{{link}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+            <div class="container-fluid comments text-left">
+                <h4 class="text-left">Recent Comments</h4>
+                <div class="container-fluid color-light">
+                    <ul>
+                        {{#each recentComments}}
+                        <li><a href="{{link}}">{{title}}</a></li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

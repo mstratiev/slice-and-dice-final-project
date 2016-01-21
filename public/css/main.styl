@@ -1,1 +1,76 @@
-ECHO is on.
+fontHeader = Arial
+html, body
+	margin 0
+	padding 0
+large-screen()
+	.row-fixed
+		width 950px !important
+		display inline-block
+	.container-fluid
+		text-align center !important
+large-screen()
+nav
+	margin 0 !important
+.container-fluid
+	padding 0 !important
+.row
+	margin-left 0 !important
+	margin-right 0 !important
+#header
+	font-family fontHeader !important
+	nav
+		height 200px
+		background-color black
+		background-image none
+		border-radius 0
+	.nav
+		margin-top 2em
+		border 1px solid black
+		border-radius 10px
+		background-color gray
+		a
+			color white
+			padding-left 10px
+			padding-right 0
+		.active>a
+			background-color rgba(0,0,0,0) !important
+			font-style italic
+			box-shadow none !important
+			background-image none !important
+	.navbar-collapse
+		padding 0 !important
+	.nav-full
+		width 100% !important
+.color-mid
+	background-color #f4f4f4
+.color-light
+	background-color white
+.color-dark
+	background-color black
+	color #f4f4f4
+.post
+	margin-bottom 2em
+.read-more
+	border-radius 15px !important
+	background-color black !important
+	background-image none !important
+	color white !important
+	padding .6em !important
+.additional-info
+	border-radius 10px !important
+	background-color black !important
+	background-image none !important
+	color white !important
+	padding .6em !important
+	transform translateY(1.5em)
+	
+
+#footer
+	.nav
+		a
+			color white!important
+		.active
+			a
+				background-color rgba(0,0,0,0) !important
+				background-image none
+				font-style italic

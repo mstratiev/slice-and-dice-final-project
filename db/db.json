@@ -1,0 +1,49 @@
+{
+    "posts": [{
+            "id": "0",
+            "user": {
+                "username": "Mart",
+                "image": "#"
+            },
+            "category": "Bla",
+            "commentsCount": "0",
+            "image": "http://image1.masterfile.com/getImage/838-02498861em-Venus-And-Cupid-With-Bee-Hive-Lucas-Cranach-the-Elder--1472-1553-Germa.jpg",
+            "title": "IDK",
+            "body": "Lorem ipsum dolor sit amet.",
+            "comments": [],
+            "date": "idk"
+        },
+
+        {
+            "id": "0",
+            "user": {
+                "username": "Mart",
+                "image": "#"
+            },
+            "category": "Bla",
+            "commentsCount": "0",
+            "image": "http://www.wallcoo.net/paint/lucas_cranach/images/Lucas_Cranach_Artwork_ml0005.jpg",
+            "title": "IDK",
+            "body": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum harum dolor facilis, totam reiciendis quidem!",
+            "comments": [],
+            "date": "idk"
+        }
+    ],
+
+    "users": [{
+        "id": "0",
+        "username": "Martin",
+        "password": "idk",
+        "date": "idk",
+        "image": "#"
+    }],
+    "comments": [{
+        "id": "0",
+        "date": "idk",
+        "user": {
+            "username": "Martin",
+            "image": "idk"
+        },
+        "body": "Lorem ipsum dolor sit amet."
+    }]
+}

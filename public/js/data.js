@@ -1,15 +1,15 @@
 var data = (function() {
-    var COOKIE_NAME = 'daemon';
+    var COOKIE_NAME = 'auth-kы';
 
-    function setDeamon(dem) {
-        cookie.set(COOKIE_NAME, dem, 0.01);
+    function setAuthKey(key) {
+        cookie.set(COOKIE_NAME, key, 0.01);
     }
 
-    function getDeamon() {
+    function getAuthKey() {
         return cookie.get(COOKIE_NAME);
     }
 
-    function removeDeamon() {
+    function removeAuthKey() {
         cookie.remove(COOKIE_NAME);
     }
 
@@ -18,35 +18,28 @@ var data = (function() {
         return Math.floor(Math.random() * (high - low + 1) + low);
     }
 
-    function newDeamon() {
-        var demons = ['Asmodeus', 'Lucifer', 'Mammon', 'Leviathan', 'Satan', 'Belphegor','Beelzebub'];
-        var len = demons.length -1;
-        return demons[rnd(0,len)];
-    }
-
-
-    var getNews = function() {
+    var getAllPosts = function() {
         var promise = new Promise(function(resolve, reject) {
             $.ajax({
                 url: '/posts',
                 method: "GET",
                 data: {},
                 success: function(res) {
+                    console.log(res)
                     resolve(res)
                 },
                 error: function(err) {
                     console.log(err)
                 }
-            })
-
-        })
+            });
+        });
         return promise
     };
-    /*
-    var getByDemon = function(demon) {
+
+    var getOnePost = function(id) {
         var promise = new Promise(function(resolve, reject) {
             $.ajax({
-                url: '/posts/' + demon,
+                url: '/posts/' + id,
                 method: "GET",
                 data: {},
                 success: function(res) {
@@ -57,53 +50,15 @@ var data = (function() {
                 }
             })
 
-        })
+        });
         return promise
     };
-*/
-/*
-    var getDaily = function() {
-        var promise = new Promise(function(resolve, reject) {
-            $.ajax({
-                url: '/...',
-                method: "GET",
-                data: {},
-                success: function(res) {
-                    resolve(res)
-                },
-                error: function(err) {
-                    console.log(err)
-                }
-            })
 
-        })
-        return promise
-    };
-*/
-
-
-    var checkDeamon = function() {
-        var promise = new Promise(function(resolve, reject) {
-            var dem = getDeamon();
-            if (!dem) {
-                dem = newDeamon();
-                setDeamon(dem);
-            }
-            resolve(dem);
-        })
-
-        return promise
-
-    };
 
     return {
-        news: {
-            get: getNews/*,
-            getByDemon: getByDemon,
-            getDaily: getDaily*/
-        },
-        demon: {
-            check: checkDeamon
+        posts: {
+            getAll: getAllPosts,
+            getPost: getOnePost
         }
     }
 })();
