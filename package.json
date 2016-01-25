@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/mstratiev/slice-and-dice-final-project#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "underscore": "^1.8.3"
   }
 }

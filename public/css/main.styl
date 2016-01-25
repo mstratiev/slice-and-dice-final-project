@@ -8,6 +8,74 @@ large-screen()
 		display inline-block
 	.container-fluid
 		text-align center !important
+	#header
+		nav
+			height 290px
+		.nav
+			margin-top 130px !important
+	#content
+		>div
+			padding-bottom 32em !important
+		.trail
+			padding-left 0.4em
+			font-size .9em
+			margin-top 2em
+			margin-bottom 2em
+		.post
+			padding 0
+			h3
+				hr
+					margin-bottom 0 !important
+					margin-top: 0 !important
+					padding 0 !important
+					margin-right: 0;
+					height: 1px;
+					width: 100%;
+					background-color: #a6a6a6;
+					background-color: black;
+			.posted-by
+				margin-top 0.2em
+				font-size 1.1em
+			img
+				max-height 16em
+				max-width 16em
+				margin-top 1.1em
+				margin-left -1em
+			.body
+				padding-left 3em
+				padding-top 1.1em
+				font-size .9em
+			.read-more
+				margin-top 1.6em
+				margin-right 1.5em
+		.recent
+			padding-left 5em
+	#footer
+		height 370px
+		>div
+			height inherit
+			>div:first-child
+				height 310px
+				padding-top 2.7em
+			>div
+				text-align left
+				>div
+					text-align left !important
+					>div
+						text-align left !important
+						font-size 0.9em
+						line-height 1.7em !important
+						padding-top 0.2em !important
+					h3
+						font-size 1.4em
+					
+			.nav
+				font-size .8em
+				li
+					a
+						padding-left .5em !important
+				
+	
 large-screen()
 nav
 	margin 0 !important
@@ -19,12 +87,10 @@ nav
 #header
 	font-family fontHeader !important
 	nav
-		height 200px
 		background-color black
 		background-image none
 		border-radius 0
 	.nav
-		margin-top 2em
 		border 1px solid black
 		border-radius 10px
 		background-color gray
@@ -51,11 +117,14 @@ nav
 .post
 	margin-bottom 2em
 .read-more
-	border-radius 15px !important
+	border-radius 1em !important
 	background-color black !important
 	background-image none !important
+	width 7em !important
 	color white !important
-	padding .6em !important
+	padding .2em !important
+	height 2.4em !important
+	font-size .85em !important
 .additional-info
 	border-radius 10px !important
 	background-color black !important
@@ -74,3 +143,5 @@ nav
 				background-color rgba(0,0,0,0) !important
 				background-image none
 				font-style italic
+				
+large-screen()

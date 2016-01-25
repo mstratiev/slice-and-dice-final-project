@@ -19,6 +19,7 @@
             t.parents('li').addClass('active')
         })},500) 
     });
+
     var loading = '<div style="text-align: center">Under Construction</div>'
     var sammyApp = Sammy('#content', function() {
         var $content = $('#content');
@@ -34,8 +35,9 @@
         this.get('#/posts', function(context) {
             postController.getAll(context);
         });
-        this.get('#/post/:id', function(context) {
-            $content.html(loading);
+        this.get('#/posts/:id', function(context) {
+            var id = this.params['id'];
+            console.log(id);
             postController.getPost(context, id)
         });
     })
