@@ -68,13 +68,13 @@ var data = (function() {
         return xhr.get('api/recent-comments');
     };
     var userLogin = function(userObj){
-        return xhr.posts('api/user/login', userObj);
+        return xhr.post('api/user/login', userObj);
     };
     var userRegister = function(userObj){
-        return xhr.posts('api/user/register', userObj);
+        return xhr.post('api/user/register', userObj);
     };
     var userLogout = function(userObj){
-        return xhr.posts('api/user/logout', userObj);
+        return xhr.post('api/user/logout', userObj);
     };
     return {
         posts: {

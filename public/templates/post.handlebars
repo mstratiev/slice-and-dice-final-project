@@ -59,7 +59,7 @@
         <div class="col-md-4 recent">
             <div class="container-fluid posts text-left">
                 <h4 class="text-left">Recent Posts</h4>
-                <div class="container-fluid color-light">
+                <div class="container-fluid color-light field">
                     <ul>
                         {{#each recentPosts}}
                         <li><a href="#/posts/{{id}}">{{title}}</a></li>
@@ -69,7 +69,7 @@
             </div>
             <div class="container-fluid comments text-left">
                 <h4 class="text-left">Recent Comments</h4>
-                <div class="container-fluid color-light">
+                <div class="container-fluid color-light field">
                     <ul>
                         {{#each recentComments}}
                         <li><a href="#/posts/{{postId}}">{{body}}</a></li>

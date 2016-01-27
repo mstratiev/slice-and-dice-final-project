@@ -28,15 +28,17 @@ body {
 #content .post {
   padding: 0;
 }
-#content .post h3 hr {
+#content .post h3 {
   margin-bottom: 0 !important;
-  margin-top: 0 !important;
+}
+#content .post hr {
+  margin-bottom: 8px !important;
+  margin-top: 8px !important;
   padding: 0 !important;
   margin-right: 0;
   height: 1px;
   width: 100%;
   background-color: #a6a6a6;
-  background-color: #000;
 }
 #content .post .posted-by {
   margin-top: 0.2em;
@@ -58,7 +60,64 @@ body {
   margin-right: 1.5em;
 }
 #content .recent {
-  padding-left: 5em;
+  padding-left: 4em;
+}
+#content .recent .posts h4 {
+  margin-top: 1.3em;
+  margin-left: 0.5em;
+}
+#content .recent .posts .field {
+  border-radius: 0.8em;
+  border: 1px solid #d3d3d3;
+  width: 272px;
+}
+#content .recent .posts .field ul {
+  list-style-type: none;
+  margin: 1.8em 0em;
+  padding-left: 30px;
+  text-align: left !important;
+  width: 240px;
+}
+#content .recent .posts .field ul li {
+  width: 100%;
+  text-align: left !important;
+}
+#content .recent .posts .field ul li a {
+  font-size: 0.9em;
+  color: #000;
+}
+#content .recent .posts .field ul li+li {
+  margin-top: 1em;
+}
+#content .recent .comments h4 {
+  margin-top: 1.3em;
+  margin-left: 0.5em;
+}
+#content .recent .comments .field {
+  border-radius: 0.8em;
+  border: 1px solid #d3d3d3;
+  width: 272px;
+}
+#content .recent .comments .field ul {
+  list-style-type: none;
+  margin: 1.8em 0em;
+  padding-left: 30px;
+  text-align: left !important;
+  width: 240px;
+}
+#content .recent .comments .field ul li {
+  width: 100%;
+  text-align: left !important;
+}
+#content .recent .comments .field ul li a {
+  font-size: 0.9em;
+  color: #000;
+}
+#content .recent .comments .field ul li+li {
+  margin-top: 1em;
+}
+#content .login {
+  margin-top: 3em;
 }
 #footer {
   height: 370px;
@@ -195,15 +254,17 @@ nav {
 #content .post {
   padding: 0;
 }
-#content .post h3 hr {
+#content .post h3 {
   margin-bottom: 0 !important;
-  margin-top: 0 !important;
+}
+#content .post hr {
+  margin-bottom: 8px !important;
+  margin-top: 8px !important;
   padding: 0 !important;
   margin-right: 0;
   height: 1px;
   width: 100%;
   background-color: #a6a6a6;
-  background-color: #000;
 }
 #content .post .posted-by {
   margin-top: 0.2em;
@@ -225,7 +286,64 @@ nav {
   margin-right: 1.5em;
 }
 #content .recent {
-  padding-left: 5em;
+  padding-left: 4em;
+}
+#content .recent .posts h4 {
+  margin-top: 1.3em;
+  margin-left: 0.5em;
+}
+#content .recent .posts .field {
+  border-radius: 0.8em;
+  border: 1px solid #d3d3d3;
+  width: 272px;
+}
+#content .recent .posts .field ul {
+  list-style-type: none;
+  margin: 1.8em 0em;
+  padding-left: 30px;
+  text-align: left !important;
+  width: 240px;
+}
+#content .recent .posts .field ul li {
+  width: 100%;
+  text-align: left !important;
+}
+#content .recent .posts .field ul li a {
+  font-size: 0.9em;
+  color: #000;
+}
+#content .recent .posts .field ul li+li {
+  margin-top: 1em;
+}
+#content .recent .comments h4 {
+  margin-top: 1.3em;
+  margin-left: 0.5em;
+}
+#content .recent .comments .field {
+  border-radius: 0.8em;
+  border: 1px solid #d3d3d3;
+  width: 272px;
+}
+#content .recent .comments .field ul {
+  list-style-type: none;
+  margin: 1.8em 0em;
+  padding-left: 30px;
+  text-align: left !important;
+  width: 240px;
+}
+#content .recent .comments .field ul li {
+  width: 100%;
+  text-align: left !important;
+}
+#content .recent .comments .field ul li a {
+  font-size: 0.9em;
+  color: #000;
+}
+#content .recent .comments .field ul li+li {
+  margin-top: 1em;
+}
+#content .login {
+  margin-top: 3em;
 }
 #footer {
   height: 370px;
