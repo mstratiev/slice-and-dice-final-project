@@ -1,7 +1,28 @@
 fontHeader = Arial
+nav-color = #323b44
 html, body
 	margin 0
 	padding 0
+
+bg-gradient()
+	background: rgba(50,59,67,1);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(50,59,67,1) 0%, rgba(17,22,28,1) 69%, rgba(17,22,28,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(50,59,67,1)), color-stop(69%, rgba(17,22,28,1)), color-stop(100%, rgba(17,22,28,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(50,59,67,1) 0%, rgba(17,22,28,1) 69%, rgba(17,22,28,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(50,59,67,1) 0%, rgba(17,22,28,1) 69%, rgba(17,22,28,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(50,59,67,1) 0%, rgba(17,22,28,1) 69%, rgba(17,22,28,1) 100%);
+	background: radial-gradient(ellipse at center, rgba(50,59,67,1) 0%, rgba(17,22,28,1) 69%, rgba(17,22,28,1) 100%);
+	filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#323b43', endColorstr='#11161c', GradientType=1 )";
+	
+nav-background()
+	background: rgba(62,72,82,1);
+	background: -moz-linear-gradient(top, rgba(62,72,82,1) 0%, rgba(50,59,68,1) 69%, rgba(50,59,68,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(62,72,82,1)), color-stop(69%, rgba(50,59,68,1)), color-stop(100%, rgba(50,59,68,1)));
+	background: -webkit-linear-gradient(top, rgba(62,72,82,1) 0%, rgba(50,59,68,1) 69%, rgba(50,59,68,1) 100%);
+	background: -o-linear-gradient(top, rgba(62,72,82,1) 0%, rgba(50,59,68,1) 69%, rgba(50,59,68,1) 100%);
+	background: -ms-linear-gradient(top, rgba(62,72,82,1) 0%, rgba(50,59,68,1) 69%, rgba(50,59,68,1) 100%);
+	background: linear-gradient(to bottom, rgba(62,72,82,1) 0%, rgba(50,59,68,1) 69%, rgba(50,59,68,1) 100%);
+	filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4852', endColorstr='#323b44', GradientType=0 )";
 large-screen()
 	.row-fixed
 		width 950px !important
@@ -14,8 +35,6 @@ large-screen()
 		.nav
 			margin-top 130px !important
 	#content
-		>div
-			padding-bottom 32em !important
 		.trail
 			padding-left 0.4em
 			font-size .9em
@@ -97,6 +116,8 @@ large-screen()
 		.login
 			margin-top 3em
 	#footer
+		.about-box
+			padding 0.3em 4.2em 0 0
 		height 370px
 		>div
 			height inherit
@@ -120,9 +141,19 @@ large-screen()
 				li
 					a
 						padding-left .5em !important
+						color white!important
+				.active
+					a
+						background-color rgba(0,0,0,0) !important
+						background-image none
+						font-style italic
 				
 	
 large-screen()
+
+
+
+
 nav
 	margin 0 !important
 .container-fluid
@@ -135,11 +166,18 @@ nav
 	nav
 		background-color black
 		background-image none
+		bg-gradient()
 		border-radius 0
+		border-bottom 1px solid white
+		-webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+		-moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+		box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
 	.nav
-		border 1px solid black
+		border none
 		border-radius 10px
-		background-color gray
+		background-color nav-color
+		nav-background()
+		border-top 1px solid #4f5861
 		a
 			color white
 			padding-left 10px
@@ -149,28 +187,47 @@ nav
 			font-style italic
 			box-shadow none !important
 			background-image none !important
+	i.fa
+		color #1e242c
 	.navbar-collapse
 		padding 0 !important
 	.nav-full
 		width 100% !important
-.color-mid
+	.dropdown-toggle:hover ~ .dropdown-menu, .dropdown-menu:hover
+		display block
+	.dropdown-menu
+		background-color nav-color
+		border-radius 0 0 10px 10px
+		border-left 1px solid #475059
+		border-top none
+		margin-top -1px
+		li
+			height 3em
+			width 100%
+			a
+				height inherit
+				width inherit
+				line-height 2.5em
+				
+.color-mid, body
 	background-color #f4f4f4
 .color-light
 	background-color white
 .color-dark
 	background-color black
+	bg-gradient()
 	color #f4f4f4
 .post
 	margin-bottom 2em
-.read-more
-	border-radius 1em !important
-	background-color black !important
-	background-image none !important
-	width 7em !important
-	color white !important
-	padding .2em !important
-	height 2.4em !important
-	font-size .85em !important
+	.read-more
+		border-radius 1em !important
+		background-color black !important
+		background-image none !important
+		width 7em !important
+		color white !important
+		padding .2em !important
+		height 2.4em !important
+		font-size .85em !important
 .additional-info
 	border-radius 10px !important
 	background-color black !important
@@ -178,16 +235,50 @@ nav
 	color white !important
 	padding .6em !important
 	transform translateY(1.5em)
-	
-
-#footer
-	.nav
-		a
-			color white!important
-		.active
-			a
-				background-color rgba(0,0,0,0) !important
-				background-image none
-				font-style italic
-				
+					
 large-screen()
+	
+.about-us
+	padding-bottom 5em
+	>.row
+		margin-top 3em
+	.about-box
+		padding 0.3em 0 0 4.2em
+	.read-more
+		float right
+		height 2em
+		width 7em
+		background-color white
+		color black
+		border-radius 1em
+		font-size .8em
+.fasca
+	height 11.5em
+	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
+	h3
+		margin-top 1.4em
+		font-size 1.9em
+	.additional-info
+		width 9.5em	
+.portfolio-container
+	.row
+		text-align left
+		padding 6.7em 0 3em 0
+		height 30em
+		.cell
+			display inline-block
+			margin 0 3em 2.8em 0
+			width 10.8em
+			height 7.5em
+			background-color #2f666b
+			box-sizing border-box
+			border .5em solid white
+			-webkit-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+			-moz-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+			box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+		.cell:nth-child(5n)
+			margin-right 0
+		.cell:nth-child(5n-4)
+			margin-left .1em

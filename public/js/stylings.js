@@ -1,17 +1,18 @@
 //styles
-(function(){$(document).ready(function($) {
-    templates.get('header').then(function(data) {
-        $('#header').html(data)
+(function() {
+    $(document).ready(function($) {
+        templates.get('header').then(function(data) {
+            $('#header').html(data)
+        });
+        templates.get('footer').then(function(data) {
+            $('#footer').html(data)
+        });
     });
-    templates.get('footer').then(function(data) {
-        $('#footer').html(data)
-    });
-});
 })();
 
 //events
 
-(function(){
+(function() {
     setTimeout(function() {
         $('.nav').on('click', function(ev) {
             var t = $(ev.target);
@@ -27,16 +28,24 @@
     }, 500);
 
     //login and register hanldes
-    console.log('events')
-    $('#content').on('click','#login',  function(){
+    $('#content').on('click', '.btn-login', function() {
         var user = $('#inputUsername').val();
         var pass = $('#inputPassword').val();
-        userController.login({username: user, password:pass});
+        userController.login({
+            username: user,
+            password: pass
+        });
     });
-    $('#content').on('click', '#register', function(){
+    $('#content').on('click', '.btn-register', function() {
         var user = $('#inputUsername').val();
         var pass = $('#inputPassword').val();
-        userController.register({username: user, password:pass});
+        userController.register({
+            username: user,
+            password: pass
+        }).then(function(res) {
+            console.log(res);
+            window.location.href = '#/login'
+        });
     });
 
 

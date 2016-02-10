@@ -1,5 +1,12 @@
 var data = (function() {
     var COOKIE_NAME = 'auth-kы';
+    var hash = function(str) {
+        var h = str;
+
+        //fucking crypto!
+        // var h = CryptoJS.MD5(str);
+        return h;
+    };
 
     var setAuthKey = function(key) {
         cookie.set(COOKIE_NAME, key, 0.01);
@@ -34,17 +41,20 @@ var data = (function() {
                 });
             })
         },
-        post: function(url, data){
-            return new Promise(function(resolve, reject){
+        post: function(url, data) {
+            var json = JSON.stringify(data);
+            return new Promise(function(resolve, reject) {
                 $.ajax({
                     url: url,
                     method: "POST",
-                    data: data,
+                    data: json,
+                    contentType: 'application/json; charset=utf-8',
+                    dataType: 'json',
                     success: function(res) {
                         resolve(res);
                     },
                     error: function(err) {
-                        console.log(err);
+                        console.log(err.message);
                         reject(err);
                     }
                 });
@@ -53,7 +63,7 @@ var data = (function() {
     };
 
     var getAllPosts = function() {
-        return  xhr.get('/posts');
+        return xhr.get('/posts');
     };
     var getOnePost = function(id) {
         return xhr.get('/posts/' + id);
@@ -67,14 +77,24 @@ var data = (function() {
     var getRecentComments = function() {
         return xhr.get('api/recent-comments');
     };
-    var userLogin = function(userObj){
-        return xhr.post('api/user/login', userObj);
+    var userLogin = function(username, password) {
+        console.log(username, password)
+        var dataCrypted = {
+            username: username,
+            password: hash(password)
+        };
+        console.log(dataCrypted)
+        return xhr.post('api/user/login', dataCrypted);
     };
-    var userRegister = function(userObj){
-        return xhr.post('api/user/register', userObj);
+    var userRegister = function(username, password) {
+        var dataCrypted = {
+            username: username,
+            password: hash(password)
+        };
+        return xhr.post('api/user/register', dataCrypted);
     };
-    var userLogout = function(userObj){
-        return xhr.post('api/user/logout', userObj);
+    var userLogout = function(username) {
+        return xhr.post('api/user/logout', username);
     };
     return {
         posts: {
