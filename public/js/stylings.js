@@ -7,11 +7,14 @@
                 $(el).removeClass('triggered')
             });
             $('.navbar-collapse').removeClass('center-block');
+
+            $('nav').addClass('mobile')
         } else if (wi > 951) {
             $('.row-fixed').each(function(index, el) {
                 $(el).addClass('triggered')
             });
             $('.navbar-collapse').addClass('center-block');
+            $('nav').removeClass('mobile')
         }
     };
 

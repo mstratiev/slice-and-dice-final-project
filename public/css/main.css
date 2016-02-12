@@ -59,19 +59,6 @@ body,
     background: linear-gradient(to bottom, #3e4852 0%, #323b44 69%, #323b44 100%);
     filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4852', endColorstr='#323b44', GradientType=0 )";
   }
-  #header .nav li {
-    width: 49%;
-    display: inline-block;
-    text-align: center;
-  }
-  #header .nav li.pull-right {
-    width: 33%;
-  }
-  #header .nav a {
-    color: #fff;
-    padding-left: 10px;
-    padding-right: 0;
-  }
   #header .nav .active>a {
     background-color: rgba(0,0,0,0) !important;
     font-style: italic;
@@ -81,7 +68,21 @@ body,
   #header i.fa {
     color: #1e242c;
   }
-  #header .btn-menu {
+  #header .mobile li {
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+  }
+  #header .mobile li.pull-right {
+    width: 33%;
+  }
+  #header .mobile a {
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  #header .mobile .btn-menu {
+    display: inline-block;
     background: none;
     background-color: #000;
     border: none;
@@ -91,7 +92,7 @@ body,
     margin-top: 1em;
     margin-bottom: 1em;
   }
-  #header .btn-menu i {
+  #header .mobile .btn-menu i {
     color: #fff;
   }
   .about-us {
@@ -356,6 +357,9 @@ body,
   }
   #header i.fa {
     color: #1e242c;
+  }
+  #header .btn-menu {
+    display: none;
   }
   #header .navbar-collapse {
     padding: 0 !important;

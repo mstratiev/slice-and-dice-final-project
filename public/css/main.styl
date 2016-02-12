@@ -195,6 +195,8 @@ large-screen()
 				background-image none !important
 		i.fa
 			color #1e242c
+		.btn-menu
+			display none
 		.navbar-collapse
 			padding 0 !important
 		.nav-full
@@ -351,6 +353,14 @@ small-screen()
 		.nav
 			background-color nav-color
 			nav-background()
+			.active>a
+				background-color rgba(0,0,0,0) !important
+				font-style italic
+				box-shadow none !important
+				background-image none !important
+		i.fa
+			color #1e242c
+		.mobile
 			li
 				width 49%
 				display inline-block
@@ -361,24 +371,19 @@ small-screen()
 				color white
 				padding-left 10px
 				padding-right 0
-			.active>a
-				background-color rgba(0,0,0,0) !important
-				font-style italic
-				box-shadow none !important
-				background-image none !important
-		i.fa
-			color #1e242c
-		.btn-menu
-			background none
-			background-color black
-			border none
-			height 3em
-			width 3em
-			margin-left 2em
-			margin-top 1em
-			margin-bottom 1em
-			i
-				color white
+			.btn-menu
+				display inline-block
+				background none
+				background-color black
+				border none
+				height 3em
+				width 3em
+				margin-left 2em
+				margin-top 1em
+				margin-bottom 1em
+				i
+					color white
+			
 	.about-us
 		margin-bottom 5em
 		>.row
