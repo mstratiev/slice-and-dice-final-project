@@ -1,35 +1,38 @@
 <div class="container-fluid color-mid">
-    <div class="row row-fixed"><div class="row text-left">
+    <div class="row row-fixed triggered"><div class="row text-left">
             <div class="trail">
                 <a href="#/home">Home</a><span>&gt&gt</span>
                 <a href="#/posts">Blog</a><span>&gt&gt</span>
-                <a href="#/posts/{{post.id}}">Current post</a>
+                <a href="#/posts/{{post.id}}">{{post.title}}</a>
             </div>
         </div>
-        <div class="col-md-7">
+        <div class="col-md-8 post current-post">
             <div class="row text-left">
-            <h2 class="titles">{{post.title}}</h2>
+            <h2 class="post-title"><a href="#/posts/{{post.id}}">{{post.title}}</a></h2>
+                    <hr/>
             </div>
             {{!-- Post --}}
-            <div class="container-fluid current-post">
-                <div class="row">
+            <div class="container-fluid">
+                <div class="row text-left posted-by">
                     Posted by {{post.user.username}} on {{post.dateConverted}} in {{post.category}} | {{post.commentsCount}} Comments
                 </div>
-                <div class="row">
-                    <div class="col-md-4">
+                <div class="row text-left">
+                    <div class="col-md-4 post-img">
                         <img src="{{post.image}}" alt="">
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-md-8 body">
                         {{post.body}}
                     </div>
                 </div>
             </div>
             {{!-- Post comments --}}
             <div class="container-fluid comments">
-                <h2>{{post.commentsCount}} Comments</h2> {{#each post.comments}}
-                <div class="container-fluid">
+                <h3>{{post.commentsCount}} Comments</h2>
+    <hr/>
+            {{#each post.comments}}
+                <div class="container-fluid comment">
                     <div class="row">
-                        <div class="col-md-1">
+                        <div class="col-md-2">
                             <div class="row">
                                 <img src="{{this.user.image}}" alt="" />
                             </div>
@@ -37,13 +40,13 @@
                                 <span class="date">{{this.date}}</span>
                             </div>
                         </div>
-                        <div class="col-md-11">
+                        <div class="col-md-10  baloon">
                             <h4>{{this.user.username}} says:</h4>
                             <div class="container-fluid">
                                 {{this.body}}
                             </div>
                             <div class="container-fluid">
-                                <button class="btn btn-default btn-xs pull-right">Read more</button>
+                                <button class="btn btn-default btn-xs pull-right read-more">Read more</button>
                             </div>
                         </div>
                     </div>

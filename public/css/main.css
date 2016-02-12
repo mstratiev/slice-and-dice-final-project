@@ -293,6 +293,12 @@ body,
     margin-top: 2em;
     margin-bottom: 2em;
   }
+  .posts .trail a {
+    color: #000;
+  }
+  .posts .trail a:hover {
+    text-decoration: none;
+  }
   .posts .post {
     padding: 0;
     margin-bottom: 2em;
@@ -354,6 +360,85 @@ body,
   }
   .posts .post .read-more a:hover {
     text-decoration: none;
+  }
+  .posts .current-post >.row:first-child {
+    height: 0;
+  }
+  .posts .current-post .post-title {
+    transform: translateY(-135px);
+  }
+  .posts .current-post .post-title a {
+    color: #fff;
+    text-decoration: none;
+  }
+  .posts .current-post .text-left hr {
+    margin-top: -2.4em !important;
+  }
+  .posts .current-post .posted-by {
+    margin-top: 2em;
+  }
+  .posts .current-post .comments {
+    margin-top: 4em;
+  }
+  .posts .current-post .comments h3 {
+    margin-top: 1.2em;
+    text-align: left;
+  }
+  .posts .current-post .comments .comment hr {
+    margin-top: 0;
+  }
+  .posts .current-post .comments .comment img {
+    height: 65px;
+    width: 65px;
+    border: 5px solid #fff;
+    margin-top: 1.8em;
+    margin-left: -2.2em;
+  }
+  .posts .current-post .comments .comment h4 {
+    font-size: 1.4em;
+    text-align: left;
+    margin-top: -0.2em;
+  }
+  .posts .current-post .comments .comment .baloon {
+    margin: 2em 0 0 -1.5em;
+    border: 1px solid #c5c5c5;
+    border-radius: 10px;
+    padding: 2em 0 1em 2em;
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #f7f7f7 82%, #f7f7f7 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fefefe), color-stop(82%, #f7f7f7), color-stop(100%, #f7f7f7));
+    background: -webkit-linear-gradient(top, #fefefe 0%, #f7f7f7 82%, #f7f7f7 100%);
+    background: -o-linear-gradient(top, #fefefe 0%, #f7f7f7 82%, #f7f7f7 100%);
+    background: -ms-linear-gradient(top, #fefefe 0%, #f7f7f7 82%, #f7f7f7 100%);
+    background: linear-gradient(to bottom, #fefefe 0%, #f7f7f7 82%, #f7f7f7 100%);
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f7f7f7', GradientType=0 )";
+  }
+  .posts .current-post .comments .comment .baloon >div {
+    text-align: left !important;
+  }
+  .posts .current-post .comments .comment .baloon:after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    left: -10px;
+    border-style: solid;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent #fff;
+    display: block;
+    width: 0;
+    z-index: 1;
+  }
+  .posts .current-post .comments .comment .baloon:before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: -11px;
+    border-style: solid;
+    border-width: 11px 11px 11px 0;
+    border-color: transparent #c5c5c5;
+    display: block;
+    width: 0;
+    z-index: 0;
   }
   .posts .recent {
     padding-left: 4em;

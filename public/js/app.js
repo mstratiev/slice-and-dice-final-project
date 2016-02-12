@@ -1,6 +1,6 @@
 (function() {
 
-    var loading = '<div style="text-align: center">Under Construction</div>'
+    var loading = '<div style="text-align: center; height: 10em; line-height: 9em">Template not given</div>'
     var sammyApp = Sammy('#content', function() {
         var $content = $('#content');
         var content = document.querySelector('#content');

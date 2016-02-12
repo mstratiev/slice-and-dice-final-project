@@ -35,6 +35,15 @@ fasca-background()
 	background: linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(244,244,244,1) 82%, rgba(244,244,244,1) 100%);
 	filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f4f4f4', GradientType=0 )";
 	
+comment-gradient()
+	background: rgba(254,254,254,1);
+	background: -moz-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(247,247,247,1) 82%, rgba(247,247,247,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254,254,254,1)), color-stop(82%, rgba(247,247,247,1)), color-stop(100%, rgba(247,247,247,1)));
+	background: -webkit-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(247,247,247,1) 82%, rgba(247,247,247,1) 100%);
+	background: -o-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(247,247,247,1) 82%, rgba(247,247,247,1) 100%);
+	background: -ms-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(247,247,247,1) 82%, rgba(247,247,247,1) 100%);
+	background: linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(247,247,247,1) 82%, rgba(247,247,247,1) 100%);
+	filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f7f7f7', GradientType=0 )";
 //==============================END GRADIENTS===========================>
 
 
@@ -61,6 +70,10 @@ large-screen()
 			font-size .9em
 			margin-top 2em
 			margin-bottom 2em
+			a
+				color black
+			a:hover
+				text-decoration none
 		.post
 			padding 0
 			margin-bottom 2em
@@ -113,6 +126,69 @@ large-screen()
 					color white
 				a:hover
 					text-decoration none
+		.current-post
+			>.row:first-child
+				height 0
+			.post-title
+				a
+					color white
+					text-decoration none
+				transform translateY(-135px)
+			.text-left
+				hr
+					margin-top -2.4em !important
+			.posted-by
+				margin-top 2em
+			.comments
+				margin-top 4em
+				h3
+					margin-top 1.2em
+					text-align left
+				.comment
+					hr
+						margin-top 0
+					img
+						height 65px
+						width 65px
+						border 5px solid white
+						margin-top 1.8em
+						margin-left -2.2em
+					h4
+						font-size 1.4em
+						text-align left
+						margin-top -0.2em
+						//margin 2.6em 0 0 2.2em
+					.baloon
+						margin 2em 0 0 -1.5em
+						border 1px solid #c5c5c5
+						border-radius 10px
+						padding 2em 0 1em 2em
+						comment-gradient()
+						>div
+							text-align left !important
+					.baloon:after
+						content: ""
+						position: absolute
+						top: 18px
+						left: -10px
+						border-style: solid
+						border-width: 10px 10px 10px 0
+						border-color: transparent #ffffff
+						display: block
+						width: 0
+						z-index: 1
+					.baloon:before 
+						content: "";
+						position: absolute;
+						top: 17px;
+						left: -11px;
+						border-style: solid;
+						border-width: 11px 11px 11px 0;
+						border-color: transparent #c5c5c5;
+						display: block;
+						width: 0;
+						z-index: 0;
+			
 		.recent
 			padding-left 4em
 			.posts
