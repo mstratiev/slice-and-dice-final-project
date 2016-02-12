@@ -8,6 +8,20 @@
             $('#footer').html(data)
         });
     });
+
+    $(window).resize(function(event) {
+    var wi = $(window).width();
+        if(wi<950){
+            $('.row-fixed').each(function(index, el) {
+                $(el).removeClass('triggered')
+            });
+        }else if (wi>951){
+            $('.row-fixed').each(function(index, el) {
+                $(el).addClass('triggered')
+            });
+        }
+        
+    });
 })();
 
 //events

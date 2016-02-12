@@ -3,7 +3,8 @@ nav-color = #323b44
 html, body
 	margin 0
 	padding 0
-
+	
+//===============================GRADIENTS===========================>
 bg-gradient()
 	background: rgba(50,59,67,1);
 	background: -moz-radial-gradient(center, ellipse cover, rgba(50,59,67,1) 0%, rgba(17,22,28,1) 69%, rgba(17,22,28,1) 100%);
@@ -23,18 +24,39 @@ nav-background()
 	background: -ms-linear-gradient(top, rgba(62,72,82,1) 0%, rgba(50,59,68,1) 69%, rgba(50,59,68,1) 100%);
 	background: linear-gradient(to bottom, rgba(62,72,82,1) 0%, rgba(50,59,68,1) 69%, rgba(50,59,68,1) 100%);
 	filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4852', endColorstr='#323b44', GradientType=0 )";
+
+fasca-background()
+	background: rgba(254,254,254,1);
+	background: -moz-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(244,244,244,1) 82%, rgba(244,244,244,1) 100%);
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(254,254,254,1)), color-stop(82%, rgba(244,244,244,1)), color-stop(100%, rgba(244,244,244,1)));
+	background: -webkit-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(244,244,244,1) 82%, rgba(244,244,244,1) 100%);
+	background: -o-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(244,244,244,1) 82%, rgba(244,244,244,1) 100%);
+	background: -ms-linear-gradient(top, rgba(254,254,254,1) 0%, rgba(244,244,244,1) 82%, rgba(244,244,244,1) 100%);
+	background: linear-gradient(to bottom, rgba(254,254,254,1) 0%, rgba(244,244,244,1) 82%, rgba(244,244,244,1) 100%);
+	filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f4f4f4', GradientType=0 )";
+	
+//==============================END GRADIENTS===========================>
+
+
+//==============================LARGE SCREENS MIXIN===============================>
 large-screen()
-	.row-fixed
+	//.row-fixed trigger class to be replaced with media query
+	.triggered
 		width 950px !important
 		display inline-block
 	.container-fluid
 		text-align center !important
-	#header
-		nav
-			height 290px
-		.nav
-			margin-top 130px !important
-	#content
+		padding 0 !important
+	.row
+		margin-left 0 !important
+		margin-right 0 !important
+	nav
+		margin 0 !important
+		
+
+
+	//==========================BLOG===============================>
+	.posts
 		.trail
 			padding-left 0.4em
 			font-size .9em
@@ -42,8 +64,11 @@ large-screen()
 			margin-bottom 2em
 		.post
 			padding 0
-			h3
+			margin-bottom 2em
+			.post-title
 				margin-bottom 0 !important
+				a
+					color black
 			hr
 				margin-bottom 8px !important
 				margin-top: 8px !important
@@ -55,11 +80,21 @@ large-screen()
 			.posted-by
 				margin-top 0.2em
 				font-size 1.1em
-			img
-				max-height 16em
-				max-width 16em
+			.post-img
+				border 1px solid gray
+				padding 0
 				margin-top 1.1em
-				margin-left -1em
+				box-sizing border-box
+				//height 16em
+				-webkit-box-shadow: inset 5px 5px 15px -3px rgba(0,0,0,0.75);
+				-moz-box-shadow: inset 5px 5px 15px -3px rgba(0,0,0,0.75);
+				box-shadow: inset 5px 5px 15px -3px rgba(0,0,0,0.75);
+				img
+					min-height 16em
+					width 100%
+					box-sizing border-box
+					border 5px solid white
+					position relative
 			.body
 				padding-left 3em
 				padding-top 1.1em
@@ -67,6 +102,18 @@ large-screen()
 			.read-more
 				margin-top 1.6em
 				margin-right 1.5em
+				border-radius 1em !important
+				background-color black !important
+				background-image none !important
+				width 7em !important
+				color white !important
+				padding .2em !important
+				height 2.4em !important
+				font-size .85em !important
+				a
+					color white
+				a:hover
+					text-decoration none
 		.recent
 			padding-left 4em
 			.posts
@@ -113,12 +160,69 @@ large-screen()
 								color black
 						li+li
 							margin-top 1em
-		.login
-			margin-top 3em
+	//===========================END BLOG===========================>
+	.login
+		margin-top 3em
+		
+
+	//=====================================HEADER=================================>
+	#header
+		font-family fontHeader !important
+		nav
+			height 290px
+			background-color black
+			background-image none
+			bg-gradient()
+			border-radius 0
+			border-bottom 1px solid white
+			-webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+			-moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+			box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+		.nav
+			margin-top 130px !important
+			border none
+			border-radius 10px
+			background-color nav-color
+			nav-background()
+			border-top 1px solid #4f5861
+			a
+				color white
+				padding-left 10px
+				padding-right 0
+			.active>a
+				background-color rgba(0,0,0,0) !important
+				font-style italic
+				box-shadow none !important
+				background-image none !important
+		i.fa
+			color #1e242c
+		.navbar-collapse
+			padding 0 !important
+		.nav-full
+			width 100% !important
+		.dropdown-toggle:hover ~ .dropdown-menu, .dropdown-menu:hover
+			display block
+		.dropdown-menu
+			background-color nav-color
+			border-radius 0 0 10px 10px
+			border-left 1px solid #475059
+			border-top none
+			margin-top -1px
+			li
+				height 3em
+				width 100%
+				a
+					height inherit
+					width inherit
+					line-height 2.5em
+	//==============================END HEADER============================>
+
+		
+	//======================FOOTER=========================>
 	#footer
+		height 370px
 		.about-box
 			padding 0.3em 4.2em 0 0
-		height 370px
 		>div
 			height inherit
 			>div:first-child
@@ -137,6 +241,7 @@ large-screen()
 						font-size 1.4em
 					
 			.nav
+				background-color #11161c
 				font-size .8em
 				li
 					a
@@ -147,138 +252,125 @@ large-screen()
 						background-color rgba(0,0,0,0) !important
 						background-image none
 						font-style italic
-				
+	//==========================END FOOTER===================================>				
 	
-large-screen()
 
 
 
-
-nav
-	margin 0 !important
-.container-fluid
-	padding 0 !important
-.row
-	margin-left 0 !important
-	margin-right 0 !important
-#header
-	font-family fontHeader !important
-	nav
-		background-color black
-		background-image none
-		bg-gradient()
-		border-radius 0
+	//=============================HOME=======================>
+	.about-us
+		margin-bottom 5em
+		>.row
+			margin-top 3em
+		.about-box
+			padding 0.3em 0 0 4.2em
+		.read-more
+			float right
+			height 2em
+			width 7em
+			background-color white
+			color black
+			border-radius 1em
+			font-size .8em
+			
+	.fasca
+		height 11.5em
+		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+		-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
+		box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
 		border-bottom 1px solid white
-		-webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
-		-moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
-		box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
-	.nav
-		border none
-		border-radius 10px
-		background-color nav-color
-		nav-background()
-		border-top 1px solid #4f5861
-		a
-			color white
-			padding-left 10px
-			padding-right 0
-		.active>a
-			background-color rgba(0,0,0,0) !important
-			font-style italic
-			box-shadow none !important
+		fasca-background()
+		h3
+			margin-top 1.4em
+			font-size 1.9em
+		.additional-info
+			width 9.5em	
+			border-radius 10px !important
+			background-color black !important
 			background-image none !important
-	i.fa
-		color #1e242c
-	.navbar-collapse
-		padding 0 !important
-	.nav-full
-		width 100% !important
-	.dropdown-toggle:hover ~ .dropdown-menu, .dropdown-menu:hover
-		display block
-	.dropdown-menu
-		background-color nav-color
-		border-radius 0 0 10px 10px
-		border-left 1px solid #475059
-		border-top none
-		margin-top -1px
-		li
-			height 3em
-			width 100%
-			a
-				height inherit
-				width inherit
-				line-height 2.5em
-				
-.color-mid, body
-	background-color #f4f4f4
+			color white !important
+			padding .6em !important
+			transform translateY(1.5em)
+	.portfolio-container
+		margin-top 1em
+		background-color #eaeaea
+		.row
+			text-align left
+			padding 6.7em 0 3em 0
+			height 30em
+			.cell
+				display inline-block
+				margin 0 3em 2.8em 0
+				width 10.8em
+				height 7.5em
+				background-color #2f666b
+				box-sizing border-box
+				border .5em solid white
+				-webkit-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+				-moz-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+				box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+			.cell:nth-child(5n)
+				margin-right 0
+			.cell:nth-child(5n-4)
+				margin-left .1em
+	//===========================END HOME================================>
+
+//==============================END LARGE SCREEN MIXIN===========================>
+
+
+
+//=================COLORS================>
+					
+.color-mid, body, #content
+	background-color #eaeaea
 .color-light
 	background-color white
 .color-dark
 	background-color black
 	bg-gradient()
 	color #f4f4f4
-.post
-	margin-bottom 2em
-	.read-more
-		border-radius 1em !important
-		background-color black !important
-		background-image none !important
-		width 7em !important
-		color white !important
-		padding .2em !important
-		height 2.4em !important
-		font-size .85em !important
-.additional-info
-	border-radius 10px !important
-	background-color black !important
-	background-image none !important
-	color white !important
-	padding .6em !important
-	transform translateY(1.5em)
-					
-large-screen()
 	
-.about-us
-	padding-bottom 5em
-	>.row
-		margin-top 3em
-	.about-box
-		padding 0.3em 0 0 4.2em
-	.read-more
-		float right
-		height 2em
-		width 7em
-		background-color white
-		color black
-		border-radius 1em
-		font-size .8em
-.fasca
-	height 11.5em
-	-webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
-	-moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
-	box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.45);
-	h3
-		margin-top 1.4em
-		font-size 1.9em
-	.additional-info
-		width 9.5em	
-.portfolio-container
-	.row
-		text-align left
-		padding 6.7em 0 3em 0
-		height 30em
-		.cell
-			display inline-block
-			margin 0 3em 2.8em 0
-			width 10.8em
-			height 7.5em
-			background-color #2f666b
-			box-sizing border-box
-			border .5em solid white
-			-webkit-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
-			-moz-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
-			box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
-		.cell:nth-child(5n)
-			margin-right 0
-		.cell:nth-child(5n-4)
-			margin-left .1em
+//===============END COLORS===============>
+
+	
+
+//===================SMALL SCREENS MIXIN================>
+small-screen()
+	#header
+		height inherit
+
+	.portfolio-container
+		.row
+			.cell
+				display block
+
+
+
+
+
+
+//=====================GODDAMN MEDIA QUERIES===================>
+// Custom, iPhone Retina
+@media only screen and (min-width : 320px) 
+	small-screen()
+    
+
+/*
+// Extra Small Devices, Phones
+@media only screen and (min-width : 480px) 
+
+*/
+
+// Small Devices, Tablets
+@media only screen and (min-width : 768px) 
+	large-screen()
+
+/*
+// Medium Devices, Desktops 
+@media only screen and (min-width : 992px) 
+
+
+
+// Large Devices, Wide Screens 
+@media only screen and (min-width : 1200px) 
+*/
