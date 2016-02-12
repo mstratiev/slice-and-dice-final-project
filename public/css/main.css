@@ -24,13 +24,13 @@ body,
   color: #f4f4f4;
 }
 @media only screen and (min-width: 320px) {
-  #content {
+  .mobile #content {
     padding: 0;
   }
-  #header {
+  .mobile #header {
     height: inherit;
   }
-  #header nav {
+  .mobile #header nav {
     height: inherit;
     background-color: #000;
     background-image: none;
@@ -48,7 +48,7 @@ body,
     -moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
     box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
   }
-  #header .nav {
+  .mobile #header .nav {
     background-color: #323b44;
     background: #3e4852;
     background: -moz-linear-gradient(top, #3e4852 0%, #323b44 69%, #323b44 100%);
@@ -59,29 +59,29 @@ body,
     background: linear-gradient(to bottom, #3e4852 0%, #323b44 69%, #323b44 100%);
     filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4852', endColorstr='#323b44', GradientType=0 )";
   }
-  #header .nav .active>a {
+  .mobile #header .nav .active>a {
     background-color: rgba(0,0,0,0) !important;
     font-style: italic;
     box-shadow: none !important;
     background-image: none !important;
   }
-  #header i.fa {
+  .mobile #header i.fa {
     color: #1e242c;
   }
-  #header .mobile li {
+  .mobile #header .nav li {
     width: 49%;
     display: inline-block;
     text-align: center;
   }
-  #header .mobile li.pull-right {
+  .mobile #header .nav li.pull-right {
     width: 33%;
   }
-  #header .mobile a {
+  .mobile #header .nav a {
     color: #fff;
     padding-left: 10px;
     padding-right: 0;
   }
-  #header .mobile .btn-menu {
+  .mobile #header .btn-menu {
     display: inline-block;
     background: none;
     background-color: #000;
@@ -92,23 +92,23 @@ body,
     margin-top: 1em;
     margin-bottom: 1em;
   }
-  #header .mobile .btn-menu i {
+  .mobile #header .btn-menu i {
     color: #fff;
   }
-  .about-us {
+  .mobile .about-us {
     margin-bottom: 5em;
   }
-  .about-us >.row {
+  .mobile .about-us >.row {
     margin-top: 3em;
     padding: 0 1.5em 0 1.5em;
   }
-  .about-us .about-box {
+  .mobile .about-us .about-box {
     padding: 0.3em 1em 1em 1em;
   }
-  .about-us .about-box div {
+  .mobile .about-us .about-box div {
     font-size: 1.2em;
   }
-  .about-us .read-more {
+  .mobile .about-us .read-more {
     float: right;
     height: 2em;
     width: 7em;
@@ -117,7 +117,7 @@ body,
     border-radius: 1em;
     font-size: 0.8em;
   }
-  .fasca {
+  .mobile .fasca {
     border-bottom: 1px solid #fff;
     background: #fefefe;
     background: -moz-linear-gradient(top, #fefefe 0%, #f4f4f4 82%, #f4f4f4 100%);
@@ -128,35 +128,142 @@ body,
     background: linear-gradient(to bottom, #fefefe 0%, #f4f4f4 82%, #f4f4f4 100%);
     filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f4f4f4', GradientType=0 )";
   }
-  .fasca .row {
+  .mobile .fasca .row {
     padding: 0 1.5em 0 1.5em;
   }
-  .fasca .container-fluid {
+  .mobile .fasca .container-fluid {
     text-align: center;
   }
-  .additional-info {
+  .mobile .additional-info {
     width: 9.5em;
     border-radius: 10px !important;
     background-color: #000 !important;
     background-image: none !important;
     color: #fff !important;
     padding: 0.6em !important;
+    margin: 1em 0 1em 0;
   }
-  .portfolio-container .row .cell {
-    display: block;
+  .mobile .portfolio-container {
+    text-align: center;
   }
-  #footer .nav {
+  .mobile .portfolio-container .row {
+    margin: auto;
+  }
+  .mobile .portfolio-container .row .cell {
+    display: inline-block;
+    height: 30vw;
+    width: 40vw;
+    background-color: #000;
+    float: left;
+    margin-left: 1vw;
+    margin-top: 1vw;
+  }
+  .mobile #footer .about-box {
+    padding: 0.5em 1em 0 1em;
+  }
+  .mobile #footer .about-box h3 {
+    text-align: center;
+  }
+  .mobile #footer .nav {
     background-color: #11161c;
     margin-top: 2em;
   }
-  #footer .nav li a {
+  .mobile #footer .nav li a {
     padding-left: 0.5em !important;
     color: #fff !important;
   }
-  #footer .nav .active a {
+  .mobile #footer .nav .active a {
     background-color: rgba(0,0,0,0) !important;
     background-image: none;
     font-style: italic;
+  }
+  .mobile .posts .trail {
+    margin: 2em;
+    font-size: 1.2em;
+  }
+  .mobile .posts .trail a {
+    color: #000;
+  }
+  .mobile .posts .post-title {
+    margin: 0;
+    font-size: 4em;
+  }
+  .mobile .posts .post-title a {
+    color: #000;
+  }
+  .mobile .posts hr {
+    margin-bottom: 8px !important;
+    margin-top: 8px !important;
+    padding: 0 !important;
+    margin-right: 0;
+    height: 1px;
+    width: 100%;
+    background-color: #a6a6a6;
+  }
+  .mobile .posts .posted-by {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  .mobile .posts .post-img {
+    padding: 0;
+    float: left;
+    max-width: 50%;
+    border: 1px solid #808080;
+  }
+  .mobile .posts .post-img img {
+    width: 100%;
+    box-sizing: border-box;
+    border: 5px solid #fff;
+  }
+  .mobile .posts .body {
+    float: right;
+    font-size: 1.3em;
+    width: 50%;
+  }
+  .mobile .posts .read-more {
+    margin-bottom: 2em;
+    margin-right: 1.5em;
+    border-radius: 1em;
+    background-color: #000;
+    background-image: none;
+    width: 10em;
+    height: 3em;
+    font-size: 1.2em;
+    color: #fff !important;
+  }
+  .mobile .posts .read-more a {
+    color: #fff;
+  }
+  .mobile .posts .read-more a:hover {
+    text-decoration: none;
+  }
+  .mobile .posts .recent {
+    margin-bottom: 2em;
+  }
+  .mobile .posts .recent h4 {
+    text-align: center;
+    font-size: 1.2em;
+  }
+  .mobile .posts .recent .field {
+    border-radius: 0.8em;
+    border: 1px solid #d3d3d3;
+  }
+  .mobile .posts .recent .field ul {
+    list-style-type: none;
+    margin: 1.8em 0em;
+    padding-left: 30px;
+    text-align: left !important;
+  }
+  .mobile .posts .recent .field ul li {
+    width: 100%;
+    text-align: left !important;
+  }
+  .mobile .posts .recent .field ul li a {
+    font-size: 1.1em;
+    color: #000;
+  }
+  .mobile .posts .recent .field ul li+li {
+    margin-top: 1em;
   }
 }
 /*

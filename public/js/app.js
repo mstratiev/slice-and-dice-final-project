@@ -3,7 +3,7 @@
     var loading = '<div style="text-align: center">Under Construction</div>'
     var sammyApp = Sammy('#content', function() {
         var $content = $('#content');
-        var body = document.querySelector('body');
+        var content = document.querySelector('#content');
 
 
         this.get('#/', function() {
@@ -11,7 +11,7 @@
         });
         this.get('#/home', function(context) {
             templates.get('home').then(function(template) {
-                body.className = 'home';
+                content.className = 'home container-fluid';
                 $content.html(template);
             })
         });
@@ -26,11 +26,11 @@
         });
 
         this.get('#/posts', function(context) {
-            body.className = 'posts';
+            content.className = 'posts container-fluid';
             postController.getAll(context);
         });
         this.get('#/posts/:id', function(context) {
-            body.className = 'posts';
+            content.className = 'posts container-fluid';
             var id = this.params['id'];
             console.log(id);
             postController.getPost(context, id)

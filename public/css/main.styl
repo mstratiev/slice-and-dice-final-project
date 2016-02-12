@@ -336,41 +336,42 @@ large-screen()
 
 //===================SMALL SCREENS MIXIN================>
 small-screen()
-	#content
-		padding 0
-	#header
-		height inherit
-		nav
+	.mobile
+		#content
+			padding 0
+		#header
 			height inherit
-			background-color black
-			background-image none
-			bg-gradient()
-			border-radius 0
-			border-bottom 1px solid white
-			-webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
-			-moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
-			box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
-		.nav
-			background-color nav-color
-			nav-background()
-			.active>a
-				background-color rgba(0,0,0,0) !important
-				font-style italic
-				box-shadow none !important
-				background-image none !important
-		i.fa
-			color #1e242c
-		.mobile
-			li
-				width 49%
-				display inline-block
-				text-align center
-			li.pull-right
-				width 33%
-			a
-				color white
-				padding-left 10px
-				padding-right 0
+			nav
+				height inherit
+				background-color black
+				background-image none
+				bg-gradient()
+				border-radius 0
+				border-bottom 1px solid white
+				-webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+				-moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+				box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+			.nav
+				background-color nav-color
+				nav-background()
+				.active>a
+					background-color rgba(0,0,0,0) !important
+					font-style italic
+					box-shadow none !important
+					background-image none !important
+			i.fa
+				color #1e242c
+			.nav
+				li
+					width 49%
+					display inline-block
+					text-align center
+				li.pull-right
+					width 33%
+				a
+					color white
+					padding-left 10px
+					padding-right 0
 			.btn-menu
 				display inline-block
 				background none
@@ -383,66 +384,59 @@ small-screen()
 				margin-bottom 1em
 				i
 					color white
-			
-	.about-us
-		margin-bottom 5em
-		>.row
-			margin-top 3em
-			padding 0 1.5em 0 1.5em
-		.about-box
-			padding 0.3em 1em 1em 1em
-			div
-				font-size 1.2em
-		.read-more
-			float right
-			height 2em
-			width 7em
-			background-color white
-			color black
-			border-radius 1em
-			font-size .8em		
-	.fasca
-		border-bottom 1px solid white
-		fasca-background()
-		.row
-			padding 0 1.5em 0 1.5em
-		.container-fluid
-			text-align center
-			
-	.additional-info
-			width 9.5em	
-			border-radius 10px !important
-			background-color black !important
-			background-image none !important
-			color white !important
-			padding .6em !important
+				
+		.about-us
+			margin-bottom 5em
+			>.row
+				margin-top 3em
+				padding 0 1.5em 0 1.5em
+			.about-box
+				padding 0.3em 1em 1em 1em
+				div
+					font-size 1.2em
+			.read-more
+				float right
+				height 2em
+				width 7em
+				background-color white
+				color black
+				border-radius 1em
+				font-size .8em		
+		.fasca
+			border-bottom 1px solid white
+			fasca-background()
+			.row
+				padding 0 1.5em 0 1.5em
+			.container-fluid
+				text-align center
+				
+		.additional-info
+				width 9.5em	
+				border-radius 10px !important
+				background-color black !important
+				background-image none !important
+				color white !important
+				padding .6em !important
+				margin 1em 0 1em 0
 
-	.portfolio-container
-		.row
-			.cell
-				display block
-	
-	#footer/*
-		height 370px
-		.about-box
-			padding 0.3em 4.2em 0 0
-		>div
-			height inherit
-			>div:first-child
-				height 310px
-				padding-top 2.7em
-			>div
-				text-align left
-				>div
-					text-align left !important
-					>div
-						text-align left !important
-						font-size 0.9em
-						line-height 1.7em !important
-						padding-top 0.2em !important
-					h3
-						font-size 1.4em
-			*/		
+		.portfolio-container
+			text-align center
+			.row
+				margin auto
+				.cell
+					display inline-block
+					height 30vw
+					width 40vw
+					background-color black
+					float left
+					margin-left 1vw
+					margin-top 1vw
+		
+		#footer
+			.about-box
+				padding 0.5em 1em 0 1em	
+				h3
+					text-align center
 			.nav
 				background-color #11161c
 				margin-top 2em
@@ -455,7 +449,78 @@ small-screen()
 						background-color rgba(0,0,0,0) !important
 						background-image none
 						font-style italic
-				
+		.posts
+			.trail
+				margin 2em
+				font-size 1.2em
+				a 
+					color black
+			.post-title
+				margin 0
+				font-size 4em
+				a
+					color black
+			hr
+				margin-bottom 8px !important
+				margin-top: 8px !important
+				padding 0 !important
+				margin-right: 0;
+				height: 1px;
+				width: 100%;
+				background-color: #a6a6a6;
+			.posted-by
+				font-size 1.2em
+				margin-bottom 1em
+			.post-img
+				padding 0
+				float left
+				max-width 50%
+				border 1px solid gray
+				img
+					width 100%
+					box-sizing border-box
+					border 5px solid white
+			.body
+				float right
+				font-size 1.3em
+				width 50%
+			.read-more
+				margin-bottom 2em
+				margin-right 1.5em
+				border-radius 1em
+				background-color black
+				background-image none
+				width 10em
+				height 3em
+				font-size 1.2em
+				color white !important
+				a
+					color white
+				a:hover
+					text-decoration none
+			.recent
+				margin-bottom 2em
+				h4
+					text-align center
+					font-size 1.2em
+				.field
+					border-radius .8em
+					border 1px solid lightgray
+					ul
+						list-style-type none
+						margin 1.8em 0em
+						padding-left 30px
+						text-align left !important
+						li
+							width 100%
+							text-align left !important
+							a
+								font-size 1.1em
+								color black
+						li+li
+							margin-top 1em
+					
+					
 
 
 
@@ -474,8 +539,8 @@ small-screen()
 
 */
 
-// Small Devices, Tablets
-@media only screen and (min-width : 768px) 
+// Small Devices, Tablets 768px normally
+@media only screen and (min-width : 768px)
 	large-screen()
 
 /*
