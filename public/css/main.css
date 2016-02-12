@@ -24,11 +24,138 @@ body,
   color: #f4f4f4;
 }
 @media only screen and (min-width: 320px) {
+  #content {
+    padding: 0;
+  }
   #header {
     height: inherit;
   }
+  #header nav {
+    height: inherit;
+    background-color: #000;
+    background-image: none;
+    background: #323b43;
+    background: -moz-radial-gradient(center, ellipse cover, #323b43 0%, #11161c 69%, #11161c 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #323b43), color-stop(69%, #11161c), color-stop(100%, #11161c));
+    background: -webkit-radial-gradient(center, ellipse cover, #323b43 0%, #11161c 69%, #11161c 100%);
+    background: -o-radial-gradient(center, ellipse cover, #323b43 0%, #11161c 69%, #11161c 100%);
+    background: -ms-radial-gradient(center, ellipse cover, #323b43 0%, #11161c 69%, #11161c 100%);
+    background: radial-gradient(ellipse at center, #323b43 0%, #11161c 69%, #11161c 100%);
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#323b43', endColorstr='#11161c', GradientType=1 )";
+    border-radius: 0;
+    border-bottom: 1px solid #fff;
+    -webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+    -moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+    box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+  }
+  #header .nav {
+    background-color: #323b44;
+    background: #3e4852;
+    background: -moz-linear-gradient(top, #3e4852 0%, #323b44 69%, #323b44 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #3e4852), color-stop(69%, #323b44), color-stop(100%, #323b44));
+    background: -webkit-linear-gradient(top, #3e4852 0%, #323b44 69%, #323b44 100%);
+    background: -o-linear-gradient(top, #3e4852 0%, #323b44 69%, #323b44 100%);
+    background: -ms-linear-gradient(top, #3e4852 0%, #323b44 69%, #323b44 100%);
+    background: linear-gradient(to bottom, #3e4852 0%, #323b44 69%, #323b44 100%);
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#3e4852', endColorstr='#323b44', GradientType=0 )";
+  }
+  #header .nav li {
+    width: 49%;
+    display: inline-block;
+    text-align: center;
+  }
+  #header .nav li.pull-right {
+    width: 33%;
+  }
+  #header .nav a {
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 0;
+  }
+  #header .nav .active>a {
+    background-color: rgba(0,0,0,0) !important;
+    font-style: italic;
+    box-shadow: none !important;
+    background-image: none !important;
+  }
+  #header i.fa {
+    color: #1e242c;
+  }
+  #header .btn-menu {
+    background: none;
+    background-color: #000;
+    border: none;
+    height: 3em;
+    width: 3em;
+    margin-left: 2em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+  #header .btn-menu i {
+    color: #fff;
+  }
+  .about-us {
+    margin-bottom: 5em;
+  }
+  .about-us >.row {
+    margin-top: 3em;
+    padding: 0 1.5em 0 1.5em;
+  }
+  .about-us .about-box {
+    padding: 0.3em 1em 1em 1em;
+  }
+  .about-us .about-box div {
+    font-size: 1.2em;
+  }
+  .about-us .read-more {
+    float: right;
+    height: 2em;
+    width: 7em;
+    background-color: #fff;
+    color: #000;
+    border-radius: 1em;
+    font-size: 0.8em;
+  }
+  .fasca {
+    border-bottom: 1px solid #fff;
+    background: #fefefe;
+    background: -moz-linear-gradient(top, #fefefe 0%, #f4f4f4 82%, #f4f4f4 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #fefefe), color-stop(82%, #f4f4f4), color-stop(100%, #f4f4f4));
+    background: -webkit-linear-gradient(top, #fefefe 0%, #f4f4f4 82%, #f4f4f4 100%);
+    background: -o-linear-gradient(top, #fefefe 0%, #f4f4f4 82%, #f4f4f4 100%);
+    background: -ms-linear-gradient(top, #fefefe 0%, #f4f4f4 82%, #f4f4f4 100%);
+    background: linear-gradient(to bottom, #fefefe 0%, #f4f4f4 82%, #f4f4f4 100%);
+    filter: "progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefefe', endColorstr='#f4f4f4', GradientType=0 )";
+  }
+  .fasca .row {
+    padding: 0 1.5em 0 1.5em;
+  }
+  .fasca .container-fluid {
+    text-align: center;
+  }
+  .additional-info {
+    width: 9.5em;
+    border-radius: 10px !important;
+    background-color: #000 !important;
+    background-image: none !important;
+    color: #fff !important;
+    padding: 0.6em !important;
+  }
   .portfolio-container .row .cell {
     display: block;
+  }
+  #footer .nav {
+    background-color: #11161c;
+    margin-top: 2em;
+  }
+  #footer .nav li a {
+    padding-left: 0.5em !important;
+    color: #fff !important;
+  }
+  #footer .nav .active a {
+    background-color: rgba(0,0,0,0) !important;
+    background-image: none;
+    font-style: italic;
   }
 }
 /*

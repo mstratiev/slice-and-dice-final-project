@@ -270,8 +270,7 @@ large-screen()
 			background-color white
 			color black
 			border-radius 1em
-			font-size .8em
-			
+			font-size .8em			
 	.fasca
 		height 11.5em
 		-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.45);
@@ -335,13 +334,123 @@ large-screen()
 
 //===================SMALL SCREENS MIXIN================>
 small-screen()
+	#content
+		padding 0
 	#header
 		height inherit
+		nav
+			height inherit
+			background-color black
+			background-image none
+			bg-gradient()
+			border-radius 0
+			border-bottom 1px solid white
+			-webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+			-moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+			box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+		.nav
+			background-color nav-color
+			nav-background()
+			li
+				width 49%
+				display inline-block
+				text-align center
+			li.pull-right
+				width 33%
+			a
+				color white
+				padding-left 10px
+				padding-right 0
+			.active>a
+				background-color rgba(0,0,0,0) !important
+				font-style italic
+				box-shadow none !important
+				background-image none !important
+		i.fa
+			color #1e242c
+		.btn-menu
+			background none
+			background-color black
+			border none
+			height 3em
+			width 3em
+			margin-left 2em
+			margin-top 1em
+			margin-bottom 1em
+			i
+				color white
+	.about-us
+		margin-bottom 5em
+		>.row
+			margin-top 3em
+			padding 0 1.5em 0 1.5em
+		.about-box
+			padding 0.3em 1em 1em 1em
+			div
+				font-size 1.2em
+		.read-more
+			float right
+			height 2em
+			width 7em
+			background-color white
+			color black
+			border-radius 1em
+			font-size .8em		
+	.fasca
+		border-bottom 1px solid white
+		fasca-background()
+		.row
+			padding 0 1.5em 0 1.5em
+		.container-fluid
+			text-align center
+			
+	.additional-info
+			width 9.5em	
+			border-radius 10px !important
+			background-color black !important
+			background-image none !important
+			color white !important
+			padding .6em !important
 
 	.portfolio-container
 		.row
 			.cell
 				display block
+	
+	#footer/*
+		height 370px
+		.about-box
+			padding 0.3em 4.2em 0 0
+		>div
+			height inherit
+			>div:first-child
+				height 310px
+				padding-top 2.7em
+			>div
+				text-align left
+				>div
+					text-align left !important
+					>div
+						text-align left !important
+						font-size 0.9em
+						line-height 1.7em !important
+						padding-top 0.2em !important
+					h3
+						font-size 1.4em
+			*/		
+			.nav
+				background-color #11161c
+				margin-top 2em
+				li
+					a
+						padding-left .5em !important
+						color white!important
+				.active
+					a
+						background-color rgba(0,0,0,0) !important
+						background-image none
+						font-style italic
+				
 
 
 
