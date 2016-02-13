@@ -1,15 +1,15 @@
 <div class="container-fluid color-mid">
     <div class="row row-fixed triggered"><div class="row text-left">
             <div class="trail">
-                <a href="#/home">Home</a><span>&gt&gt</span>
-                <a href="#/posts">Blog</a><span>&gt&gt</span>
+                <a href="#/home">Home</a> <i class="fa fa-angle-double-right"></i>
+                <a href="#/posts">Blog</a> <i class="fa fa-angle-double-right"></i>
                 <a href="#/posts/{{post.id}}">{{post.title}}</a>
             </div>
         </div>
         <div class="col-md-8 post current-post">
             <div class="row text-left">
             <h2 class="post-title"><a href="#/posts/{{post.id}}">{{post.title}}</a></h2>
-                    <hr/>
+                    <hr class="line-with-shadow" />
             </div>
             {{!-- Post --}}
             <div class="container-fluid">
@@ -28,7 +28,7 @@
             {{!-- Post comments --}}
             <div class="container-fluid comments">
                 <h3>{{post.commentsCount}} Comments</h2>
-    <hr/>
+    <hr class="line-with-shadow" />
             {{#each post.comments}}
                 <div class="container-fluid comment">
                     <div class="row">

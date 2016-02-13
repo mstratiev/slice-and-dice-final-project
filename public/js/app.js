@@ -4,6 +4,21 @@
     var sammyApp = Sammy('#content', function() {
         var $content = $('#content');
         var content = document.querySelector('#content');
+        var header = document.querySelector('header');
+
+        this.bind('run-route', function(r, a) {
+            if (a.path == "/#/home") {
+                header.className = 'home';
+            } else {
+                header.className = '';
+            }
+            var current = '';
+            switch(true){
+                case(a.path.indexOf('home')>0): current = 'home'; break;
+                case(a.path.indexOf('posts')>0): current='posts'; break;
+            }
+            content.className = current + ' container-fluid';
+        });
 
 
         this.get('#/', function() {
@@ -11,7 +26,6 @@
         });
         this.get('#/home', function(context) {
             templates.get('home').then(function(template) {
-                content.className = 'home container-fluid';
                 $content.html(template);
             })
         });
@@ -26,13 +40,10 @@
         });
 
         this.get('#/posts', function(context) {
-            content.className = 'posts container-fluid';
             postController.getAll(context);
         });
         this.get('#/posts/:id', function(context) {
-            content.className = 'posts container-fluid';
             var id = this.params['id'];
-            console.log(id);
             postController.getPost(context, id)
         });
 

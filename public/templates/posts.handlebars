@@ -2,7 +2,7 @@
     <div class="row row-fixed triggered">
         <div class="row text-left">
             <div class="trail">
-                <a href="#/home">Home</a><span>&gt&gt</span>
+                <a href="#/home">Home</a> <i class="fa fa-angle-double-right"></i>
                 <a href="#/posts">Blog</a>
             </div>
             {{!-- insert trail --}}
@@ -13,7 +13,7 @@
             <div class="container-fluid">
                 <div class="row text-left">
                     <h3 class="post-title"><a href="#/posts/{{this.id}}">{{this.title}}</a></h3>
-                    <hr/>
+                    <hr class="line-with-shadow"/>
                 </div>
                 <div class="row text-left posted-by">
                     Posted by {{this.user.username}} on {{this.dateConverted}} in {{this.category}} | {{this.commentsCount}} Comments
