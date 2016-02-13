@@ -761,20 +761,18 @@ body,
     margin-left: 0.1em;
   }
   .carousel {
-    height: 100%;
-    top: -250px;
+    top: 0;
   }
   .carousel-inner {
-    height: 100%;
+    top: 0;
   }
   .carousel-inner .item {
-    position: absolute;
     height: 335px;
     width: 100%;
-    top: 250px !important;
+    top: 0;
   }
   .carousel-inner .item.active {
-    top: 250px;
+    top: 0;
     position: relative;
     height: auto;
     width: 100%;
