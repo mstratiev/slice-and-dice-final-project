@@ -21,46 +21,42 @@ var userController = (function() {
         return new Promise(function(resolve, reject) {
             data.users.login(user.username, user.password)
                 .then(function(res) {
-                    toastr.success('Login successfull')
-                    resolve(res)
+                    toastr.success('Login successfull');
+                    resolve(res);
                 }, function (err) {
-                    toastr.error('Invalid username of passoword')
-                    reject(err)
-                })
-        })
+                    toastr.error('Invalid username of passoword');
+                    reject(err);
+                });
+        });
     };
     var register = function(user) {
         return new Promise(function(resolve, reject) {
             if(!validator.username(user.username) || !validator.password(user.password)){
-                toastr.error('Input valid username and password')
-                reject('Invalid inputs')
+                toastr.error('Input valid username and password');
+                reject('Invalid inputs');
             }else {
             data.users.register(user.username, user.password)
-                .then(function(res) {
-                    toastr.success('Registration successfull!')
-                    resolve(res)
-                })
+                .then(function(res){
+                    toastr.success('Registration successfull!');
+                    resolve(res);
+                });
                 }
-        })
+        });
     };
     var logout = function(user) {
         return new Promise(function(resolve, reject) {
             data.users.login(user.username)
                 .then(function(res) {
-                    resolve(res)
-                })
-        })
+                    resolve(res);
+                });
+        });
     };
-
-
-
-
 
 
     return {
         login: login,
         register: register,
         logout: logout
-    }
+    };
 
 })();

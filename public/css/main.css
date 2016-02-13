@@ -138,10 +138,15 @@ body,
   .mobile #header i.fa {
     color: #1e242c;
   }
+  .mobile #header .nav {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   .mobile #header .nav li {
     width: 49%;
     display: inline-block;
     text-align: center;
+    font-size: 1.5em;
   }
   .mobile #header .nav li.pull-right {
     width: 33%;
@@ -185,7 +190,7 @@ body,
     background-color: #fff;
     color: #000;
     border-radius: 1em;
-    font-size: 0.8em;
+    font-size: 1.2em;
   }
   .mobile .fasca {
     border-bottom: 1px solid #fff;
@@ -216,14 +221,35 @@ body,
   .mobile .portfolio-container {
     text-align: center;
   }
+  .mobile .portfolio-container .row {
+    padding-left: 20%;
+    padding-top: 20px;
+  }
   .mobile .portfolio-container .row .cell {
     display: inline-block;
-    height: 30vw;
-    width: 40vw;
+    height: 40vw;
+    width: 60vw;
     background-color: #000;
     float: left;
-    margin-left: 1vw;
-    margin-top: 1vw;
+    margin-bottom: 20px;
+    background-color: #2f666b;
+    box-sizing: border-box;
+    border: 0.5em solid #fff;
+    -webkit-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+    box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+  }
+  .mobile .portfolio-container .row .cell .p-icon-container {
+    opacity: 1;
+    background: none;
+  }
+  .mobile .portfolio-container .row .cell .p-icon-container .p-icon {
+    height: 4em;
+    width: 4em;
+  }
+  .mobile .portfolio-container .row .cell .p-icon-container .p-icon i {
+    margin-top: 0.5em;
+    font-size: 2em;
   }
   .mobile #footer .about-box {
     padding: 0.5em 1em 0 1em;

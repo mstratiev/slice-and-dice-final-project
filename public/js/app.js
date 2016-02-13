@@ -1,6 +1,6 @@
 (function() {
 
-    var loading = '<div style="text-align: center; height: 10em; line-height: 9em">Template not given</div>'
+    var loading = '<div style="text-align: center; height: 10em; line-height: 9em">Template not given</div>';
     var sammyApp = Sammy('#content', function() {
         var $content = $('#content');
         var content = document.querySelector('#content');
@@ -22,7 +22,7 @@
 
 
         this.get('#/', function() {
-            this.redirect('#/home')
+            this.redirect('#/home');
         });
         this.get('#/home', function(context) {
             templates.get('home').then(function(template) {
@@ -44,7 +44,7 @@
         });
         this.get('#/posts/:id', function(context) {
             var id = this.params['id'];
-            postController.getPost(context, id)
+            postController.getPost(context, id);
         });
 
 
@@ -60,7 +60,7 @@
                     data: 'login',
                     login: true
                 }));
-            })
+            });
         });
         this.get('#/join', function(context) {
             templates.get('login').then(function(template) {
@@ -68,7 +68,7 @@
                     data: 'register',
                     login: false
                 }));
-            })
+            });
         });
         this.get('#/quote', function(context) {
             $content.html(loading);
@@ -79,6 +79,6 @@
         this.get('#/support', function(context) {
             $content.html(loading);
         });
-    })
+    });
     sammyApp.run('#/');
-}())
+}());

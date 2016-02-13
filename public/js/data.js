@@ -1,12 +1,5 @@
 var data = (function() {
     var COOKIE_NAME = 'auth-kы';
-    var hash = function(str) {
-        var h = str;
-
-        //fucking crypto!
-        // var h = CryptoJS.MD5(str);
-        return h;
-    };
 
     var setAuthKey = function(key) {
         cookie.set(COOKIE_NAME, key, 0.01);
@@ -58,7 +51,7 @@ var data = (function() {
                         reject(err);
                     }
                 });
-            })
+            });
         }
     };
 
@@ -78,12 +71,11 @@ var data = (function() {
         return xhr.get('api/recent-comments');
     };
     var userLogin = function(username, password) {
-        console.log(username, password)
+        console.log(username, password);
         var dataCrypted = {
             username: username,
             password: hash(password)
         };
-        console.log(dataCrypted)
         return xhr.post('api/user/login', dataCrypted);
     };
     var userRegister = function(username, password) {
@@ -111,5 +103,5 @@ var data = (function() {
             register: userRegister,
             logout: userLogout
         }
-    }
+    };
 })();

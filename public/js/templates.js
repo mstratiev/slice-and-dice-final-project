@@ -14,10 +14,10 @@ var templates = (function() {
                     reject(err);
                 }
             })
-        })
+        });
         return promise;
     }
     return {
         get: get
-    }
+    };
 })();

@@ -608,10 +608,13 @@ small-screen()
 			i.fa
 				color #1e242c
 			.nav
+				margin-top 0
+				margin-bottom 0
 				li
 					width 49%
 					display inline-block
 					text-align center
+					font-size 1.5em
 				li.pull-right
 					width 33%
 				a
@@ -647,7 +650,7 @@ small-screen()
 				background-color white
 				color black
 				border-radius 1em
-				font-size .8em		
+				font-size 1.2em	
 		.fasca
 			border-bottom 1px solid white
 			fasca-background()
@@ -669,15 +672,32 @@ small-screen()
 			text-align center
 			.row
 				//margin auto
+				padding-left 20%
+				padding-top 20px
 				.cell
 					display inline-block
-					height 30vw
-					width 40vw
+					height 40vw
+					width 60vw
 					background-color black
 					float left
-					margin-left 1vw
-					margin-top 1vw
-		
+					margin-bottom 20px
+					background-color #2f666b
+					box-sizing border-box
+					border .5em solid white
+					-webkit-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+					-moz-box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+					box-shadow: inset 2px 2px 11px 0px rgba(0,0,0,0.75);
+					.p-icon-container
+						opacity 1
+						background none
+						.p-icon
+							height 4em
+							width 4em
+							i
+								margin-top .5em
+								font-size 2em
+			
+
 		#footer
 			.about-box
 				padding 0.5em 1em 0 1em	

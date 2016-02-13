@@ -11,9 +11,9 @@ var postController = (function() {
                 data.posts.getRecent().then(function(recentPosts) {
                     recent.recentPosts = recentPosts;
                     resolve(true)
-                })
-            })
-        })
+                });
+            });
+        });
     };
     var getAll = function(context) {
         data.posts.getAll().then(function(posts) {
@@ -23,12 +23,12 @@ var postController = (function() {
                         posts: posts,
                         recentComments: recent.recentComments,
                         recentPosts: recent.recentPosts
-                    }))
-                })
-            })
+                    }));
+                });
+            });
 
         }, function(err) {
-            console.log(err)
+            console.log(err);
         });
     };
 
@@ -40,17 +40,17 @@ var postController = (function() {
                         post: post,
                         recentComments: recent.recentComments,
                         recentPosts: recent.recentPosts
-                    }))
-                })
+                    }));
+                });
 
-            })
+            });
 
-        })
+        });
     };
 
 
     return {
         getAll: getAll,
         getPost: getPost
-    }
+    };
 })();
