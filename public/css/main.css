@@ -56,25 +56,6 @@ body,
 .carousel {
   display: none;
 }
-.carousel-inner .item {
-  width: 100%;
-  text-align: center;
-}
-.carousel-cell {
-  display: inline-block;
-  height: 10em;
-  width: 20em;
-  background: #fff;
-}
-header.home {
-  height: 650px;
-}
-header.home nav {
-  height: 650px !important;
-}
-header.home .carousel {
-  display: block;
-}
 .p-icon-container {
   display: inline-block;
   background-color: rgba(255,255,255,0.3);
@@ -133,6 +114,9 @@ header.home .carousel {
     -webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
     -moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
     box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+  }
+  .mobile #header .navbar {
+    margin-bottom: 0;
   }
   .mobile #header .nav {
     background-color: #323b44;
@@ -775,6 +759,104 @@ header.home .carousel {
   }
   .portfolio-container .row .cell:nth-child(5n-4) {
     margin-left: 0.1em;
+  }
+  .carousel {
+    height: 100%;
+    top: -250px;
+  }
+  .carousel-inner {
+    height: 100%;
+  }
+  .carousel-inner .item {
+    position: absolute;
+    height: 335px;
+    width: 100%;
+    top: 250px !important;
+  }
+  .carousel-inner .item.active {
+    top: 250px;
+    position: relative;
+    height: auto;
+    width: 100%;
+    text-align: center;
+    display: inline-block;
+  }
+  .carousel-inner .carousel-cell {
+    margin: 1em 0 1em 0;
+    display: inline-block;
+    height: 335px;
+    width: 500px;
+    background: #25575e;
+    -webkit-box-shadow: 0px 4px 19px 5px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 4px 19px 5px rgba(0,0,0,0.75);
+    box-shadow: 0px 4px 19px 5px rgba(0,0,0,0.75);
+  }
+  .carousel-inner .carousel-cell .p-icon-container {
+    background: none;
+    opacity: 1;
+    top: -55px;
+    line-height: 130px;
+  }
+  .carousel-inner .carousel-cell .p-icon-container .p-icon {
+    height: 4.5em;
+    width: 4.5em;
+    background: none;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+  .carousel-inner .carousel-cell .p-icon-container .p-icon i {
+    color: #fff !important;
+    font-size: 2.5em;
+  }
+  .carousel-inner .carousel-cell .p-icon-container .icon-right {
+    position: relative;
+    left: 120px;
+  }
+  .carousel-inner .carousel-cell .p-icon-container .icon-left {
+    position: relative;
+    right: 120px;
+  }
+  .carousel-inner .carousel-caption-mine {
+    width: 500px;
+    height: 55px;
+    position: relative;
+    top: 280px;
+    color: #fff;
+    box-sizing: border-box;
+    line-height: 50px;
+    text-align: left;
+    padding-left: 1em;
+  }
+  .carousel-inner .carousel-caption-mine span {
+    color: #fff;
+    font-size: 1.3em;
+    z-index: 10000;
+  }
+  .carousel-inner .carousel-caption-mine:before {
+    content: "";
+    width: 500px;
+    height: 55px;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    border: 1px solid #537b80;
+    box-sizing: border-box;
+    -webkit-mask-image: linear-gradient(to right, #000, transparent);
+    mask-image: linear-gradient(to right, #000, transparent);
+  }
+  header.home {
+    height: 650px;
+  }
+  header.home nav {
+    height: 650px !important;
+  }
+  header.home .carousel {
+    margin-top: 60px;
+    display: block;
   }
 }
 /*

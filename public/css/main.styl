@@ -455,23 +455,95 @@ large-screen()
 //=====================END LINES========>
 
 //==========CAROUSEL===============>
+
 .carousel
 	display none
-.carousel-inner
-	.item
-		width 100%
-		text-align center
-.carousel-cell
-	display inline-block
-	height 10em
-	width 20em
-	background white
-header.home
-	height 650px
-	nav
-		height 650px !important
+carousel()
 	.carousel
-		display block
+		height 100%
+		top -250px
+	.carousel-inner
+		height 100%
+		.item
+			position absolute
+			height 335px
+			width 100%
+			top 250px !important
+		.item.active
+				top 250px
+				position relative
+				height auto
+				width 100%
+				text-align center
+				display inline-block
+			.carousel-cell
+				margin 1em 0 1em 0
+				display inline-block
+				height 335px
+				width 500px
+				background #25575e
+				-webkit-box-shadow: 0px 4px 19px 5px rgba(0,0,0,0.75);
+				-moz-box-shadow: 0px 4px 19px 5px rgba(0,0,0,0.75);
+				box-shadow: 0px 4px 19px 5px rgba(0,0,0,0.75);
+				.p-icon-container
+					background none
+					opacity 1
+					top -55px
+					line-height 130px
+					.p-icon
+						height 4.5em
+						width 4.5em
+						background none
+						border none
+						-webkit-box-shadow: none
+						-moz-box-shadow: none
+						box-shadow: none
+						i
+							color white !important
+							font-size 2.5em
+					.icon-right
+						position relative
+						left 120px
+					.icon-left
+						position relative
+						right 120px
+						
+			.carousel-caption-mine
+				width 500px
+				height 55px
+				position relative
+				top 280px
+				color white
+				box-sizing border-box
+				line-height 50px
+				text-align left
+				padding-left 1em
+				span
+					color white
+					font-size 1.3em
+					z-index 10000
+			.carousel-caption-mine:before
+				content ""
+				width 500px
+				height 55px
+				background-color rgba(0,0,0,0.5)
+				position absolute
+				top 0
+				left 0
+				color white
+				border 1px solid #537b80
+				box-sizing border-box
+				-webkit-mask-image: linear-gradient(to right, black, transparent);
+				mask-image: linear-gradient(to right, black, transparent);
+				
+					
+	header.home
+		height 650px
+		nav
+			height 650px !important
+		.carousel
+			margin-top 60px
+			display block
 
 
 //===========END CAROUSEL=============>
@@ -525,6 +597,8 @@ small-screen()
 				-webkit-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
 				-moz-box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
 				box-shadow: 0px 2px 15px 0px rgba(0,0,0,0.45);
+			.navbar
+				margin-bottom 0
 			.nav
 				background-color nav-color
 				nav-background()
@@ -716,6 +790,7 @@ small-screen()
 // Small Devices, Tablets 768px normally
 @media only screen and (min-width : 768px)
 	large-screen()
+	carousel()
 
 /*
 // Medium Devices, Desktops 

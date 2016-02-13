@@ -60,6 +60,7 @@
                 });
                 t.parents('li').addClass('active')
             })
+            $('.carousel').carousel('pause')
         }, 500);
 
         //login and register hanldes
